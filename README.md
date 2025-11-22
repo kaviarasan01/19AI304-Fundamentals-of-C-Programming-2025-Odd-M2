@@ -1,4 +1,4 @@
-<img width="317" height="206" alt="image" src="https://github.com/user-attachments/assets/46426dfb-97e1-4bb6-97df-3214fb5b8e31" /># 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
+# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
 # IAPR-2- Module 2 - FoC
 ## 3. Implementation of programs using conditional statements.
 ## 4. Implementation of programs using various control statements.
