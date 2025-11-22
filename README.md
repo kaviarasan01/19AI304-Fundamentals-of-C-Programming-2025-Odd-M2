@@ -1,4 +1,4 @@
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
+<img width="317" height="206" alt="image" src="https://github.com/user-attachments/assets/46426dfb-97e1-4bb6-97df-3214fb5b8e31" /># 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
 # IAPR-2- Module 2 - FoC
 ## 3. Implementation of programs using conditional statements.
 ## 4. Implementation of programs using various control statements.
@@ -14,7 +14,6 @@
   F: below 50
   
   The program should display the average marks up to two decimal places and the corresponding grade. 
-  
 # Date : 
 # Aim:
  To build a C program that receives inputs for a student’s marks in three subjects, calculates the average, and determines the grade using nested if-else statements with safe floating-point comparisons.
@@ -56,7 +55,46 @@
 ### Step 11:
   Stop
 # Program:
+```c
+#include <stdio.h>
+
+int main() {
+    float math, science, english, average;
+
+    // Step 5: Input marks
+    printf("Enter marks in Math: ");
+    scanf("%f", &math);
+
+    printf("Enter marks in Science: ");
+    scanf("%f", &science);
+
+    printf("Enter marks in English: ");
+    scanf("%f", &english);
+
+    // Step 7: Calculate average
+    average = (math + science + english) / 3.0f;
+
+    // Display average up to 2 decimal places
+    printf("\nAverage Marks: %.2f\n", average);
+
+    // Step 8–10: Nested if-else for grade determination
+    if (average >= 90.0f) {
+        printf("Grade: A\n");
+    } else if (average >= 75.0f) {
+        printf("Grade: B\n");
+    } else if (average >= 50.0f) {
+        printf("Grade: C\n");
+    } else {
+        printf("Grade: F\n");
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="317" height="206" alt="image" src="https://github.com/user-attachments/assets/249f6463-cb30-4b2d-a8fe-cff27017d74d" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +126,25 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```c
+#include <stdio.h>
+
+int main() {
+    int number = 15;   // Step 3: Initialize number
+    int i;             // Step 4: Loop counter
+
+    // Step 5: For loop to print multiplication table
+    printf("Multiplication Table of %d up to 10:\n", number);
+    for(i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="406" height="345" alt="image" src="https://github.com/user-attachments/assets/c8ace615-31b0-4d34-839d-a871cd6d190a" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +187,45 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```c
+#include <stdio.h>
+
+int main() {
+    int n, i = 2, f = 0;
+
+    // Step 4: Input number
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    // Handle numbers less than 2
+    if (n < 2) {
+        printf("%d is not a prime number.\n", n);
+        return 0;
+    }
+
+    // Step 5: Check divisibility using while loop
+    while (i <= n - 1) {
+        if (n % i == 0) {
+            f = 1; // number is divisible
+            break;
+        }
+        i++;
+    }
+
+    // Step 6: Print result
+    if (f == 0)
+        printf("%d is a prime number.\n", n);
+    else
+        printf("%d is not a prime number.\n", n);
+
+    return 0;
+}
+```
 # Output:
+<img width="277" height="76" alt="image" src="https://github.com/user-attachments/assets/6abfb528-dee1-4107-be9c-7ffbc3727da5" />
+<img width="252" height="65" alt="image" src="https://github.com/user-attachments/assets/4de69b5c-2712-4be0-96cd-de3e3191eec1" />
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +273,56 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j, k, n;
+
+    // Step 4: Read the value of n
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    // Step 5: Initialize i
+    i = 1;
+
+    // Step 6: Repeat until i > n
+    while (i <= n) {
+        // Step 6.1: Print j from i to n
+        for (j = i; j <= n; j++) {
+            if (i == 1 || j == i)
+                printf("%d", j);
+            else
+                printf(" ");
+        }
+
+        // Step 6.2: Set k = j - 2
+        k = j - 2;
+
+        // Step 6.3: Print k from 1 to i - 1
+        for (j = 1; j <= i - 1; j++) {
+            if (i == n || j == i - 1)
+                printf("%d", k);
+            else
+                printf(" ");
+            // Step 6.4: Decrease k
+            k--;
+        }
+
+        // Step 6.5: Move to next line
+        printf("\n");
+
+        // Step 7: Increase i
+        i++;
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="281" height="196" alt="image" src="https://github.com/user-attachments/assets/a2ff926a-101e-412d-b60f-6e4d9d4c71bf" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +375,47 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program:
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    // Step 4: Print the first line with 0
+    printf("0\n");
+
+    // Step 5: Set i = 7
+    i = 7;
+
+    // Step 6: Loop from i = 7 down to 1
+    while (i >= 1) {
+        // Step 6.1: Increasing sequence from i to 7
+        for (j = i; j <= 7; j++) {
+            printf("%d ", j);
+        }
+
+        // Step 6.2: Print 0 in the center
+        printf("0 ");
+
+        // Step 6.3: Decreasing sequence from 7 down to i
+        for (j = 7; j >= i; j--) {
+            printf("%d ", j);
+        }
+
+        // Step 6.4: Move to next line
+        printf("\n");
+
+        // Step 7: Decrease i
+        i--;
+    }
+
+    return 0;
+}
+```
+# Output:  
+<img width="330" height="243" alt="image" src="https://github.com/user-attachments/assets/a2351e74-9a3b-4fa2-ba71-45e51cf1f40e" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
